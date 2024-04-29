@@ -1,0 +1,2 @@
+spark-submit --master spark://bdvm:7077 /home/bdvm/spark-3.5.1-bin-hadoop3/examples/src/main/python/kmeans.py /home/bdvm/spark-3.5.1-bin-hadoop3/data/mllib/kmeans_data.txt 
+hadoop jar /home/bdvm/hadoop-3.4.0/share/hadoop/tools/lib/hadoop-streaming-3.4.0.jar -input /input/lejourseleve.txt -output /output -mapper WordCountMapper.py -reducer WordCountReducer.py -file WordCountMapper.py -file WordCountReducer.py
