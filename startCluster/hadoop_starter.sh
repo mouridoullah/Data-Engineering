@@ -1,11 +1,16 @@
 #!/bin/bash
-# Script de démarrage du cluster Hadoop avec YARN
 
-# Démarrer le service HDFS (Hadoop Distributed File System)
-start-dfs.sh
+# Chemin vers le dossier Hadoop
+HADOOP_HOME="/home/bdvm/hadoop-3.4.0"
 
-# Démarrer le service YARN
-start-yarn.sh
+# Définition des variables d'environnement
+export HADOOP_HOME
+export PATH="$HADOOP_HOME/bin:$PATH"
 
+# Démarrage du service HDFS
+$HADOOP_HOME/sbin/start-dfs.sh
+
+# Démarrage du service YARN
+$HADOOP_HOME/sbin/start-yarn.sh
 # Vérifier l'état du cluster
 hdfs dfsadmin -report
