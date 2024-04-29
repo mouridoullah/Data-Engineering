@@ -1,0 +1,6 @@
+- Kotlin
+- AirFlow
+- Data lake
+- Dataiku
+- hdfs-python pip install hdfs
+- 
